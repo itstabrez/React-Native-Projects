@@ -1,0 +1,6 @@
+# ninja log v5
+1	16	0	/Users/syedtabrez/Development/Code/VS Code/React Native/Project/android/app/.cxx/Debug/492k273m/x86/CMakeFiles/cmake.verify_globs	fc07d7a5ecb3390c
+0	1213	1737450749130318244	CMakeFiles/appmodules.dir/Users/syedtabrez/Development/Code/VS_Code/React_Native/Project/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	1194d53aaabb6987
+0	1380	1737450749299496335	CMakeFiles/appmodules.dir/OnLoad.cpp.o	8394176b74801d88
+1380	1578	1737450749500301434	/Users/syedtabrez/Development/Code/VS Code/React Native/Project/android/app/build/intermediates/cxx/Debug/492k273m/obj/x86/libappmodules.so	7be674a2647fd6c3
+0	15	0	/Users/syedtabrez/Development/Code/VS Code/React Native/Project/android/app/.cxx/Debug/492k273m/x86/CMakeFiles/cmake.verify_globs	fc07d7a5ecb3390c

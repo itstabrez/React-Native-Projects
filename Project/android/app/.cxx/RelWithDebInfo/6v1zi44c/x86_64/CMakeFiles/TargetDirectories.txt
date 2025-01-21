@@ -1,0 +1,3 @@
+/Users/syedtabrez/Development/Code/VS Code/React Native/Project/android/app/.cxx/RelWithDebInfo/6v1zi44c/x86_64/CMakeFiles/appmodules.dir
+/Users/syedtabrez/Development/Code/VS Code/React Native/Project/android/app/.cxx/RelWithDebInfo/6v1zi44c/x86_64/CMakeFiles/edit_cache.dir
+/Users/syedtabrez/Development/Code/VS Code/React Native/Project/android/app/.cxx/RelWithDebInfo/6v1zi44c/x86_64/CMakeFiles/rebuild_cache.dir
