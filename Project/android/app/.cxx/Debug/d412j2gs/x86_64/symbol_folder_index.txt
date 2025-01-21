@@ -1,0 +1,1 @@
+/Users/syedtabrez/Development/Code/VS Code/React-Native Application/Project/android/app/build/intermediates/cxx/Debug/d412j2gs/obj/x86_64
