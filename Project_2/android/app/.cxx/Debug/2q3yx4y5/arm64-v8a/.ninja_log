@@ -1,0 +1,12 @@
+# ninja log v5
+0	14	0	/Users/syedtabrez/Development/Code/VS Code/React-Native Application/Project2/android/app/.cxx/Debug/2q3yx4y5/arm64-v8a/CMakeFiles/cmake.verify_globs	e8ce11399cdeae40
+0	2391	1737542864689806755	CMakeFiles/appmodules.dir/Users/syedtabrez/Development/Code/VS_Code/React-Native_Application/Project2/android/app/build/generated/autolinking/src/main/jni/autolinking.cpp.o	3f7d61450dc5d703
+0	2568	1737542864868295288	CMakeFiles/appmodules.dir/OnLoad.cpp.o	b035c215c4b132e3
+2568	2650	1737542864954501373	/Users/syedtabrez/Development/Code/VS Code/React-Native Application/Project2/android/app/build/intermediates/cxx/Debug/2q3yx4y5/obj/arm64-v8a/libappmodules.so	1431a072bb2e0bf
+0	162	0	/Users/syedtabrez/Development/Code/VS Code/React-Native Application/Project2/android/app/.cxx/Debug/2q3yx4y5/arm64-v8a/CMakeFiles/cmake.verify_globs	e8ce11399cdeae40
+14	75	0	/Users/syedtabrez/Development/Code/VS Code/React-Native Application/Project2/android/app/.cxx/Debug/2q3yx4y5/arm64-v8a/CMakeFiles/cmake.verify_globs	e8ce11399cdeae40
+0	31	0	/Users/syedtabrez/Development/Code/VS Code/React-Native Application/Project2/android/app/.cxx/Debug/2q3yx4y5/arm64-v8a/CMakeFiles/cmake.verify_globs	e8ce11399cdeae40
+11	71	0	/Users/syedtabrez/Development/Code/VS Code/React-Native Application/Project2/android/app/.cxx/Debug/2q3yx4y5/arm64-v8a/CMakeFiles/cmake.verify_globs	e8ce11399cdeae40
+0	36	0	/Users/syedtabrez/Development/Code/VS Code/React-Native Application/Project2/android/app/.cxx/Debug/2q3yx4y5/arm64-v8a/CMakeFiles/cmake.verify_globs	e8ce11399cdeae40
+30	100	0	/Users/syedtabrez/Development/Code/VS Code/React-Native Application/Project2/android/app/.cxx/Debug/2q3yx4y5/arm64-v8a/CMakeFiles/cmake.verify_globs	e8ce11399cdeae40
+0	103	0	/Users/syedtabrez/Development/Code/VS Code/React-Native Application/Project2/android/app/.cxx/Debug/2q3yx4y5/arm64-v8a/CMakeFiles/cmake.verify_globs	e8ce11399cdeae40
