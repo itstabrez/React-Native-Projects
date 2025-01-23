@@ -4,6 +4,8 @@ import { useState } from 'react'
 import FlatCard from './Component/FlatCard'
 import ElevatedCards from './Component/ElevatedCards'
 import FancyCards from './Component/FancyCards'
+import ActionCards from './Component/ActionCards'
+import ContactUs from './Component/ContactUs'
 
 const App = () => {
     const systemIsDarkMode : boolean = useColorScheme() === 'dark';
@@ -25,6 +27,8 @@ const App = () => {
           <FlatCard />
           <ElevatedCards />
           <FancyCards />
+          <ActionCards />
+          <ContactUs />
         </View>
       </ScrollView>
     </SafeAreaView>
