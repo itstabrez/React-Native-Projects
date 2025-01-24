@@ -27,7 +27,7 @@ export default function ContactUs() {
     }
   return (
     <View>
-      <Text style = {styles.headerText}>Flutter Team</Text>
+      <Text style = {styles.headerText}>Application Dev Team</Text>
         <ScrollView horizontal = {true} style = {styles.container}>
         {contactList.map(({uid , name , socialMedia , imageUrl}) => (
             <View key={uid}>
