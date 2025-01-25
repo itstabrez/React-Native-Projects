@@ -8,9 +8,11 @@ import {
   Alert,
 } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParamList } from '../App';
 import { StackNavigationProp, StackScreenProps } from '@react-navigation/stack';
 import { ParamListBase } from '@react-navigation/native';
+import StringUtils from '../Utils/StringUtils';
+import ColorUtils from '../Utils/ColorUtils';
+import { Image } from 'react-native-reanimated/lib/typescript/Animated';
 
 type LoginScreenProps = {
   navigation: StackNavigationProp<ParamListBase, "Login">; 
@@ -52,10 +54,11 @@ export default function LoginPage({ navigation }: LoginScreenProps) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome !</Text>
+      <Image source={{uri : 'Assets/SVG/healthcare.svg'}}/>
+      <Text style={styles.title}>{StringUtils.WELCOME_MESSAGE}</Text>
       <View style = {styles.secondTitle}>
         <Text style={styles.generalText}>to </Text>
-        <Text style={styles.coloredTitle}>HealthCare</Text>
+        <Text style={styles.coloredTitle}>{StringUtils.APP_NAME}</Text>
       </View>
       <TextInput
         style={[styles.input , errors.email && styles.errorInput]}
@@ -78,14 +81,14 @@ export default function LoginPage({ navigation }: LoginScreenProps) {
       {errors.password ? <Text style={styles.errorText}>{errors.password}</Text> : null}
 
       <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-        <Text style={styles.buttonText}>Login</Text>
+        <Text style={styles.buttonText}>{StringUtils.LOGIN_BUTTON}</Text>
       </TouchableOpacity>
       <View style={styles.linkContainer}>
         <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
-          <Text style={styles.link}>Forgot Password?</Text>
+          <Text style={styles.link}>{StringUtils.FORGOT_PASSWORD}</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-          <Text style={styles.link}>Register</Text>
+          <Text style={styles.link}>{StringUtils.REGISTER}</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -109,28 +112,32 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   secondTitle: {
-    flex : 1,
+    marginBottom: 20,
     flexDirection : 'row',
     justifyContent : 'center',
   },
   coloredTitle: {
     fontSize: 28,
     fontWeight: 'bold',
-    color : 'green'
+    color : ColorUtils.BUTTON_COLOR
   },
   input: {
-    borderWidth: 1,
     borderColor: '#ccc',
-    borderRadius: 5,
-    padding: 10,
+    borderRadius: 12,
+    paddingHorizontal: 15,
+    paddingVertical: 18,
     marginBottom: 15,
+    backgroundColor: '#EAF0F1',
   },
   button: {
-    backgroundColor: '#007BFF',
-    padding: 15,
-    borderRadius: 5,
+    marginTop : 10,
+    backgroundColor: ColorUtils.BUTTON_COLOR,
+    padding: 16,
     alignItems: 'center',
+    alignSelf: 'center',
     marginBottom: 10,
+    borderRadius: 40,
+    width: "60%",
   },
   buttonText: {
     color: '#fff',
@@ -142,15 +149,17 @@ const styles = StyleSheet.create({
     marginTop: 15,
   },
   errorText: {
-    color: 'red',
+    color: ColorUtils.BUTTON_COLOR,
     fontSize: 12,
     marginBottom: 10,
   },
   errorInput: {
-    borderColor: 'red',
+    borderColor: ColorUtils.BUTTON_COLOR,
+    borderWidth: 1,
+    marginBottom: 8,
   },
   link: {
-    color: '#007BFF',
+    color: ColorUtils.BUTTON_COLOR,
     textDecorationLine: 'underline',
   },
 });
