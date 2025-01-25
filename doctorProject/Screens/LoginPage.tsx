@@ -56,7 +56,7 @@ export default function LoginPage({ navigation }: LoginScreenProps) {
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer} keyboardShouldPersistTaps="handled"
     keyboardDismissMode="on-drag">
-      <Image source={require('../Assets/images/logo.png')} style={styles.image} />
+      <Image source={require('../assets/images/logo.png')} style={styles.image} />
       <View style={styles.container}>
       <Text style={styles.title}>{StringUtils.WELCOME_MESSAGE}</Text>
       <View style = {styles.secondTitle}>
