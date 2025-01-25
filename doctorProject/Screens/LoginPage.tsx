@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 import {
   View,
   Text,
-  TextInput,
   TouchableOpacity,
   StyleSheet,
-  Alert,
+  Image,
 } from 'react-native';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { StackNavigationProp, StackScreenProps } from '@react-navigation/stack';
 import { ParamListBase } from '@react-navigation/native';
 import StringUtils from '../Utils/StringUtils';
 import ColorUtils from '../Utils/ColorUtils';
-import { Image } from 'react-native-reanimated/lib/typescript/Animated';
+import CustomButton from '../Components/CustomButton';
+import CustomInputTextField from '../Components/InputTextField';
+import Logo from '../Assets/svg/healthcare.svg';
+import { ScrollView } from 'react-native-gesture-handler';
 
 type LoginScreenProps = {
   navigation: StackNavigationProp<ParamListBase, "Login">; 
@@ -53,54 +54,66 @@ export default function LoginPage({ navigation }: LoginScreenProps) {
   };
 
   return (
-    <View style={styles.container}>
-      <Image source={{uri : 'Assets/SVG/healthcare.svg'}}/>
+    <ScrollView contentContainerStyle={styles.scrollContainer} keyboardShouldPersistTaps="handled"
+    keyboardDismissMode="on-drag">
+      <Image source={require('../Assets/images/logo.png')} style={styles.image} />
+      <View style={styles.container}>
       <Text style={styles.title}>{StringUtils.WELCOME_MESSAGE}</Text>
       <View style = {styles.secondTitle}>
         <Text style={styles.generalText}>to </Text>
         <Text style={styles.coloredTitle}>{StringUtils.APP_NAME}</Text>
       </View>
-      <TextInput
-        style={[styles.input , errors.email && styles.errorInput]}
+      <CustomInputTextField
+        label="Email"
         placeholder="Email"
         keyboardType="email-address"
         value={email}
         onChangeText={setEmail}
+        error={errors.email}
         autoCapitalize="none"
       />
-      {errors.email ? <Text style={styles.errorText}>{errors.email}</Text> : null}
-
-      <TextInput
-        style={[styles.input , errors.password && styles.errorInput]}
-        placeholder="Password"
+           
+      <CustomInputTextField
+        label="Password"
+        placeholder="Enter your password"
         secureTextEntry
         value={password}
         onChangeText={setPassword}
+        error={errors.password}
         autoCapitalize="none"
       />
-      {errors.password ? <Text style={styles.errorText}>{errors.password}</Text> : null}
-
-      <TouchableOpacity style={styles.button} onPress={handleSubmit}>
-        <Text style={styles.buttonText}>{StringUtils.LOGIN_BUTTON}</Text>
-      </TouchableOpacity>
+      <CustomButton onPress={handleSubmit} title={StringUtils.LOGIN_BUTTON}/>
       <View style={styles.linkContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')}>
+        <TouchableOpacity onPress={() => navigation.navigate(StringUtils.FORGOT_PASSWORD_SCREEN)}>
           <Text style={styles.link}>{StringUtils.FORGOT_PASSWORD}</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Register')}>
+        <TouchableOpacity onPress={() => navigation.navigate(StringUtils.REGISTER_SCREEN)}>
           <Text style={styles.link}>{StringUtils.REGISTER}</Text>
         </TouchableOpacity>
       </View>
     </View>
+    </ScrollView>
+   
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  scrollContainer: {
+    flexGrow: 1,
     justifyContent: 'center',
+    alignItems: 'center',
     padding: 20,
     backgroundColor: '#fff',
+  },
+  container: {
+    width: '100%', 
+  },
+  image: {
+    width: 150,
+    height: 150,
+    resizeMode: 'contain', 
+    alignSelf: 'center',
+    marginBottom : '5%'
   },
   title: {
     fontSize: 28,
@@ -121,42 +134,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color : ColorUtils.BUTTON_COLOR
   },
-  input: {
-    borderColor: '#ccc',
-    borderRadius: 12,
-    paddingHorizontal: 15,
-    paddingVertical: 18,
-    marginBottom: 15,
-    backgroundColor: '#EAF0F1',
-  },
-  button: {
-    marginTop : 10,
-    backgroundColor: ColorUtils.BUTTON_COLOR,
-    padding: 16,
-    alignItems: 'center',
-    alignSelf: 'center',
-    marginBottom: 10,
-    borderRadius: 40,
-    width: "60%",
-  },
-  buttonText: {
-    color: '#fff',
-    fontWeight: 'bold',
-  },
   linkContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 15,
-  },
-  errorText: {
-    color: ColorUtils.BUTTON_COLOR,
-    fontSize: 12,
-    marginBottom: 10,
-  },
-  errorInput: {
-    borderColor: ColorUtils.BUTTON_COLOR,
-    borderWidth: 1,
-    marginBottom: 8,
   },
   link: {
     color: ColorUtils.BUTTON_COLOR,

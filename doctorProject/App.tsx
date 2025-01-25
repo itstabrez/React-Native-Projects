@@ -1,8 +1,13 @@
 import React from 'react';
 import { StyleSheet , SafeAreaView } from 'react-native';
-import StackNavigator from './Components/StackNavigator';
+import StackNavigator from './Navigator/StackNavigator';
 
-
+// App.tsx
+export type RootStackParamList = {
+  Login: undefined;
+  ForgotPassword: undefined;
+  Register: undefined;
+};
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
