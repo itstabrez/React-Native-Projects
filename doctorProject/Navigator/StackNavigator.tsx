@@ -6,6 +6,7 @@ import ForgotPasswordScreen from '../Screens/ForgotPasswordScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, StackScreenProps } from '@react-navigation/stack';
 import { RootStackParamList } from '../App';
+import AppointmentPage from '../Screens/doctor_screen/AppointmentPage';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -21,6 +22,7 @@ export default function StackNavigator() {
         />
         <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen} options={{ title: 'Reset Password' }} />
         <Stack.Screen name="Register" component={RegistrationPage} />
+        <Stack.Screen name="AppointmentPage" component={AppointmentPage} options={{ title: 'Appointments' }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

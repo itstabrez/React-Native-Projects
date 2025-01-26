@@ -49,7 +49,7 @@ export default function LoginPage({ navigation }: LoginScreenProps) {
 
   const handleSubmit = () => {
     if (validate()) {
-      console.log('Login successful!');
+      navigation.navigate(StringUtils.APPOINTMENT_PAGE)
     }
   };
 

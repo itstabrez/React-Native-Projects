@@ -11,6 +11,7 @@ const StringUtils = {
     FORGOT_PASSWORD_SCREEN: "ForgotPassword",
     LOGIN_SCREEN: "Login",
     REGISTER_SCREEN: "Register",
+    APPOINTMENT_PAGE: "AppointmentPage",
 
   };
   

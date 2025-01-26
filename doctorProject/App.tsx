@@ -6,6 +6,7 @@ export type RootStackParamList = {
   Login: undefined;
   ForgotPassword: undefined;
   Register: undefined;
+  AppointmentPage: undefined;
 };
 export default function App() {
   return (
