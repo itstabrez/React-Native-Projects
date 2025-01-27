@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet , SafeAreaView } from 'react-native';
-import StackNavigator from './Navigator/StackNavigator';
+import StackNavigator from './lib/Navigator/StackNavigator';
 
 export type RootStackParamList = {
   Login: undefined;

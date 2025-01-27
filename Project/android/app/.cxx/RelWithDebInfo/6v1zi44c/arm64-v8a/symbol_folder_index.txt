@@ -1,1 +1,0 @@
-/Users/syedtabrez/Development/Code/VS Code/React Native/Project/android/app/build/intermediates/cxx/RelWithDebInfo/6v1zi44c/obj/arm64-v8a
